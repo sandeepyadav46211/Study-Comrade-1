@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3 Div Background Image Example</title>
+  <link rel="stylesheet" href="style.css">
+  <style>/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Box Styling */
+.box {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border: 3px solid #333;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  opacity: 0.9;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* Background Images */
+.box1 { background-image: url("images/img1.jpg"); }
+.box2 { background-image: url("images/img2.jpg"); }
+.box3 { background-image: url("images/img3.jpg"); }
+
+/* Overlay Text and Button */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.overlay h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.overlay p {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #ff5722;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e64a19;
+}
+
+/* Anchor Tag Styling Practice */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: yellow;
+}
+
+/* Placeholder Pseudo Element */
+input::placeholder {
+  color: gray;
+  font-style: italic;
+}
+
+/* Input Styling */
+.input-section {
+  margin-top: 30px;
+}
+input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 6px;
+  border: 2px solid #333;
+}
+</style>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- First Box -->
+    <div class="box box1">
+      <div class="overlay">
+        <h2>Nature View</h2>
+        <p>Enjoy the beauty of nature 🌿</p>
+        <a href="#" class="btn"><i class="fas fa-leaf"></i> Explore</a>
+      </div>
+    </div>
+
+    <!-- Second Box -->
+    <div class="box box2">
+      <div class="overlay">
+        <h2>City Lights</h2>
+        <p>Feel the vibes of city life ✨</p>
+        <a href="#" class="btn"><i class="fas fa-city"></i> Discover</a>
+      </div>
+    </div>
+
+    <!-- Third Box -->
+    <div class="box box3">
+      <div class="overlay">
+        <h2>Adventure</h2>
+        <p>Find your next adventure 🏔</p>
+        <a href="#" class="btn"><i class="fas fa-compass"></i> Start</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Input example for ::placeholder -->
+  <div class="input-section">
+    <input type="text" placeholder="Type your name here...">
+  </div>
+
+</body>
+</html>

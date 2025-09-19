@@ -1,0 +1,58 @@
+<h1>Hello World</h1><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Split Image into 8 Parts</title>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+  min-height: 100vh;
+}
+
+/* Grid: 4 columns × 2 rows */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 150px); /* each cell width */
+  grid-template-rows: repeat(2, 150px);    /* each cell height */
+  gap: 2px; /* thin gap between pieces */
+}
+
+/* Each piece shows a portion of the big image */
+.piece {
+  background-image: url("https://picsum.photos/id/1015/600/300"); 
+  background-repeat: no-repeat;
+  background-size: 400% 200%; 
+}
+
+.piece:nth-child(1) { background-position: 0%   0%; }
+.piece:nth-child(2) { background-position: 33.33% 0%; }
+.piece:nth-child(3) { background-position: 66.66% 0%; }
+.piece:nth-child(4) { background-position: 100% 0%; }
+.piece:nth-child(5) { background-position: 0%   100%; }
+.piece:nth-child(6) { background-position: 33.33% 100%; }
+.piece:nth-child(7) { background-position: 66.66% 100%; }
+.piece:nth-child(8) { background-position: 100% 100%; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="piece"></div>
+    <div class="piece"></div>
+    <div class="piece"></div>
+    <div class="piece"></div>
+    <div class="piece"></div>
+    <div class="piece"></div>
+    <div class="piece"></div>
+    <div class="piece"></div>
+  </div>
+</body>
+</html>
